@@ -8,6 +8,10 @@ text: "qux" output => "qux"
 
 
 def fn_hack_4(s):
-    result = s
-    #...
+    
+    if len(s) > 3:
+        result = s[1:-1]
+        return result
+    else:
+        result = s
     return result

@@ -9,6 +9,22 @@ text: ["a","b"] output => ["2","1"]
 
 
 def fn_hack_8(s):
-    result = s
-    #...
+    
+    n = len(s)
+    result = []
+    
+    if n % 2 != 0:  
+        for i in range(n):
+            result.append(f"{s[-(i+1)]}-{n-i}")
+    else:  
+        for i in range(n):
+            result.append(str(n - i))
+        
     return result
+
+
+print(fn_hack_8(["a", "b", "c", "d", "e"]))
+print(fn_hack_8(["a", "b", "c"]))  
+print(fn_hack_8(["a", "b", "c", "d"]))  
+print(fn_hack_8(["a", "b"]))  
+
